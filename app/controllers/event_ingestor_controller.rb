@@ -5,7 +5,5 @@ class EventIngestorController < ApplicationController
                        broadcaster_id: rand(1_000))
   rescue StandardError => e
     Rails.log.error("SDMKF: Error raised => #{e}")
-  ensure
-    ActiveRecord::Base.clear_active_connections!
   end
 end
