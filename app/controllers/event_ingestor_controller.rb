@@ -1,5 +1,5 @@
 class EventIngestorController < ApplicationController
-  MAILING_ID = [200, 300, 400, 500].freeze
+  MAILING_ID = [400, 500].freeze
 
   def new
     ClickEvent.create!(signup_id: rand(100_000),
